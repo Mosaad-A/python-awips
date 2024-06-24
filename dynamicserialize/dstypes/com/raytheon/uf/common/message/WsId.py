@@ -37,7 +37,6 @@
 import struct
 import socket
 import os
-import pwd
 import threading
 
 class WsId(object):
@@ -49,7 +48,7 @@ class WsId(object):
         
         self.userName = userName
         if userName is None:
-            self.userName = pwd.getpwuid(os.getuid()).pw_name
+            self.userName = (os.getuid()).pw_name
             
         self.progName = progName
         if progName is None:

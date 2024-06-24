@@ -20,13 +20,13 @@
 
 # File auto-generated against equivalent DynamicSerialize Java class
 
-import os, pwd
+import os
 
 class UserId(object):
 
     def __init__(self, id = None):
         if id is None:
-           self.id = pwd.getpwuid(os.getuid()).pw_name
+           self.id = (os.getuid()).pw_name
         else:
            self.id = id
 
